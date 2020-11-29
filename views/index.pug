@@ -1,0 +1,27 @@
+include includes/head
+//ELEMNT MIXIN
+mixin tableElement(el)
+    - var rounded = Math.round((el.atomic_mass+Number.EPSILON) * 1000) / 1000
+    td.tableElement(class=el.category.split(" ")[0])
+        p.number=el.number
+        h2=el.symbol
+        h3=el.name
+        p=rounded 
+body
+    table
+        - var s = 6, d=10, f = 14;
+        for num in [1,2,3,4,5,6,7]
+            tr(class = `periodo-${num}`)
+                for element in tabla
+                    if element.period== num
+                        if element.group
+                        +tableElement(element)
+                        case element.number
+                            when 1
+                                td(colspan=s+f+d)
+                            when 4
+                            when 12
+                                td(colspan=d+f)
+                            when 20
+                            when 38
+                                td(colspan=f)

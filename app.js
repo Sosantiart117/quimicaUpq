@@ -8,10 +8,10 @@ const
 app.use(express.static(__dirname + "/public"));
 app.set("view engine", "pug");
 
-//pages
-app.get('/', (req, res) => {
-    res.render("index",{tabla:tabla.elements});
-});
+//gets
+app.get('/tabla', (req, res) => {
+    res.render("index",{tabla:tabla.elements, title:"Tabla Periodica"});
+})
 
 // Listen on port ...
 app.listen(PORT, () => {
