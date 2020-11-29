@@ -2,26 +2,46 @@ include includes/head
 //ELEMNT MIXIN
 mixin tableElement(el)
     - var rounded = Math.round((el.atomic_mass+Number.EPSILON) * 1000) / 1000
-    td.tableElement(class=el.category.split(" ")[0])
+    td.tableElement(class=el.category.split(" ")[0])&attributes(attributes)
         p.number=el.number
         h2=el.symbol
         h3=el.name
         p=rounded 
+mixin placeholder(range)
+    td.placeholder
+        p=range
 body
-    table
-        - var s = 6, d=10, f = 14;
-        for num in [1,2,3,4,5,6,7]
-            tr(class = `periodo-${num}`)
-                for element in tabla
-                    if element.period== num
-                        if element.group
-                        +tableElement(element)
-                        case element.number
-                            when 1
-                                td(colspan=s+f+d)
-                            when 4
-                            when 12
-                                td(colspan=d+f)
-                            when 20
-                            when 38
-                                td(colspan=f)
+    .tablaPeriodica
+        table.principal
+            - var s = 6, d=10, f = 0, raras = ["actinide","lanthanide"];
+            for num in [1,2,3,4,5,6,7]
+                tr(class = `periodo-${num}`)
+                    for element in tabla
+                        - var cat = element.category.split(" ")[0];
+                        if element.period== num
+                            if cat == raras[0] || cat == raras[1]
+                                +tableElement(element)(hidden)
+                            else 
+                                +tableElement(element)
+                            case element.number
+                                when 1
+                                    td(class="spaceS" colspan=s+f+d)
+                                when 4
+                                when 12
+                                    td(class="spaceD" colspan=d+f)
+                                when 20
+                                when 38
+                                    td(class="spaceF" colspan=f hidden)
+                                when 72
+                                    +placeholder("52..71")
+                                when 104
+                                    +placeholder("89..103")
+        hr.inTable
+        table.secundaria(hidden)
+            for num in [6,7]
+                tr(class = `periodo-${num}`)
+                    for element in tabla
+                        - var cat = element.category.split(" ")[0];
+                        if element.period== num
+                            if cat == raras[0] || cat == raras[1]
+                                +tableElement(element)
