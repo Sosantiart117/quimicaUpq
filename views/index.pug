@@ -2,18 +2,19 @@ include includes/head
 //ELEMNT MIXIN
 mixin tableElement(el)
     - var rounded = Math.round((el.atomic_mass+Number.EPSILON) * 1000) / 1000
-    td.tableElement(class=el.category.split(" ")[0])&attributes(attributes)
+    - var tipo = el.category.split(" ")[0];
+    td.tableElement(class=`${tipo == "unknown," ? "unknown" : tipo}`)&attributes(attributes)
         p.number=el.number
         h2=el.symbol
         h3=el.name
         p=rounded 
-mixin placeholder(range)
-    td.placeholder
+mixin placeholder(range, tipo)
+    td.placeholder(class=tipo)
         p=range
 body
     .tablaPeriodica
         table.principal
-            - var s = 6, d=10, f = 0, raras = ["actinide","lanthanide"];
+            - var s = 6, d=10, f = 0, raras = ["lanthanide","actinide"];
             for num in [1,2,3,4,5,6,7]
                 tr(class = `periodo-${num}`)
                     for element in tabla
@@ -32,12 +33,12 @@ body
                                 when 20
                                 when 38
                                     td(class="spaceF" colspan=f hidden)
-                                when 72
-                                    +placeholder("52..71")
-                                when 104
-                                    +placeholder("89..103")
-        hr.inTable
-        table.secundaria(hidden)
+                                when 57
+                                    +placeholder("57..71", raras[0])
+                                when 89
+                                    +placeholder("89..103", raras[1])
+        #spaceIntraTabla
+        table.secundaria
             for num in [6,7]
                 tr(class = `periodo-${num}`)
                     for element in tabla
