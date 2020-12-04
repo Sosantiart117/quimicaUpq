@@ -1,0 +1,22 @@
+doctype html
+html 
+    include includes/head
+    body
+        header 
+            .hero
+            .sombra
+            .contenedor
+                .contenido
+                    h1=pageName
+                    h2=title
+            .barra
+                nav.navegacion
+                    a(href="#Introducción") Introducción a la Química
+                    a(href="#Teoría") Teoría Atómica
+                    a(href="#Mezclas") Mezclas
+                    a(href="#Soluciones") Soluciones 
+                    a(href="#Método") Método Científico
+                    a(href="#Material") Material de Laboratorio
+                    .dark
+                        label(for="btn-menu" class="dark-mode-button") Modo Oscuro
+                        input(type="checkbox" id="btn-menu" onclick="document.documentElement.classList.toggle('dark-mode')")

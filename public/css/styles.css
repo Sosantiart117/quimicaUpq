@@ -1,0 +1,208 @@
+:root{
+    --primary: #F07B13;
+    --primaryAlt: whitesmoke;
+    --mainContrast: #232a34;
+    --accent: crimson;
+}
+html {
+    box-sizing: border-box;
+    /* height: 3000px; */
+}
+body{
+    text-align: center;
+    height: 100%;
+    font-family: 'Karla', sans-serif;
+}
+*, html, body{
+    margin: 0; 
+    padding: 0;
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+/*Genreal*/
+.wrapp {
+    height: inherit;
+    width: 98%;
+    margin: 0 auto;
+}
+
+h1,h2,h3 {
+    margin-top: 0;
+    color: var(--primary);
+    font-family: 'Crete Round', serif;
+}
+h1 {
+    font-size: 4rem;
+    color: var(--primaryAlt);
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
+p,a {
+    
+}
+p{
+    font-size: 1.1rem;
+    text-align: justify;
+}
+a{
+    font-size: 1.05rem;
+}
+a:hover{
+    border: .5px var(--primaryAlt);
+    color: var(--primary);
+}
+
+/*title*/
+.title {
+    width: 100%;
+    height: 90vh;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(../img/lab.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+.title-text{
+    position: fixed;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    border-radius: 50px;
+    padding: 20px;
+    text-align: center;
+}
+/*navbar*/
+header {
+    height: 10vh;
+    background-color: var(--mainContrast);
+    width: 100;
+    z-index: 100;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.logo{
+    height: 100%;
+    width: 25%;
+    float: left;
+    line-height: 10vh;
+}
+.logo a {
+    text-decoration: none;
+    font-size: 3.2vh;
+    color: var(--primaryAlt);
+    letter-spacing: 10px;
+}
+.navbar{
+    float: right;
+    line-height: 9vh;
+}
+.navbar a {
+    color: var(--primaryAlt);
+    text-decoration: none;
+    font-size: 2.2vh;
+    letter-spacing: 1px;
+    margin: 0 20px;
+}
+.navbar a:hover{
+    border: .5px solid var(--primaryAlt);
+    color: var(--primary);
+}
+
+/*main article*/
+main{
+    position: relative;
+    z-index: 10;
+    background-color: var(--primaryAlt);
+}
+
+/*footer*/
+footer{
+    position: relative;
+    z-index: 10;
+}
+
+
+/*image effect*/
+img:hover{
+	-webkit-transform: scale(0.8);
+	-webkit-transition: 0.5s;
+}
+
+/*mode*/ 
+.mode-button{
+    cursor: pointer;
+    font-size: 15px;
+    background: var(--accent); 
+    color: var(--primaryAlt);
+    padding:10px;
+    border-radius: 5px;
+}
+
+/*------------------------------tabla-----------------------------------*/
+
+.tablaPeriodica{
+    font-size: 1.5vh;
+    padding: 100px 0;
+}
+.secundaria{
+    margin-left:3vw;
+}
+.tableElement{
+    text-align: center;
+    width: 6vw;
+    height: 10vh;
+}
+h2.symbol {
+    color: var(--mainContrast);
+    font-size: 2.5vh;
+}
+h3.name, p.number, p.mass {
+    text-align: center;
+    color: var(--mainContrast);
+    font-size: inherit;
+}
+
+#spaceIntraTabla{
+    height: 5vh;
+}
+.alkali{
+    background-color: #ea9d3f;
+}
+.alkaline{
+    background-color: #fabd70;
+}
+.metalloid{
+    background-color: #afd965;
+}
+.noble{
+    background-color: #88dbf2;
+}
+.transition{
+    background-color: #faefa5;
+}
+.post-transition{
+    background-color: #fffb0b;
+}
+.diatomic{
+    background-color: #d9d;
+}
+.polyatomic{
+    background-color: #f195ac;
+}
+.lanthanide{
+    background-color: #92fab2;
+}
+.actinide{
+    background-color: #3ae5b7;
+}
+.unknown{
+    background-color: var(--primaryAlt);
+}
