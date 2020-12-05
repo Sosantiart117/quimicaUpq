@@ -1,14 +1,48 @@
+//- tabla MIXINS
+mixin tableElement(el)
+    - var rounded = Math.round((el.atomic_mass+Number.EPSILON) * 1000) / 1000
+    - var tipo = el.category.split(" ")[0];
+    td.tableElement(class=`${tipo == "unknown," ? "unknown" : tipo}`)&attributes(attributes)
+        p.number=el.number
+        h2.symbol=el.symbol
+        h3.name=el.name
+        p.mass=rounded 
+mixin placeholder(range, tipo)
+    td.placeholder.tableElement(class=tipo)
+        p.number=range
+
+//- index MIXINS
+mixin perfil(user)
+    div(id=`${user.short}` class="perfil")
+        a(href=`${user.link}` class="perfil-tag")
+            img.creator-pic(src=`${user.profile_pic}`)
+            h2.creator-name=user.name
+        .creator-body
+            table.creator-element: tr: +tableElement(user.element)
+            p.creator-desc=user.desc
+
+
+
 .title#title
     .title-text
         h1= title
         h2 Quimica
 header 
     .wrapp
-        .logo
-            a(href="#title")= pageName
-        nav.navbar 
-            a(href="/") Inicio
-            a(href="/PrimerParcial") Primer parcial 
-            a(href="/SegundoParcial") Segundo Parcial
-            a(href="/Tabla") Tabla Periodica
-            button.mode-button alfo
+        .logo-container
+            a(class="logo" href="#title")= pageName
+        nav(class="nav" style=`${title === "Pagina Principal" ? "display:none;":""}` )
+            .nav-links 
+                ul
+                    - let link = "/parcial"
+                    li.nav-link: a(href="/") Inicio
+                    li.nav-link 
+                        a(href=link + "1") Primer Parcial
+                            i.fas.fa-caret-down
+                    li.nav-link 
+                        a(href=link + "2") Segundo Parcial
+                            i.fas.fa-caret-down
+                    li.nav-link: a(href="/Tabla") Tabla Periodica
+        .mode
+            button.mode-button 
+                i.fas.fa-adjust

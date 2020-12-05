@@ -1,0 +1,24 @@
+doctype html
+//- Mixins
+mixin tema(info, n)
+    .tema.contenedor
+        !=`<h${n}>${info.titulo}</h${n}>`
+        .cuerpo-tema.contenedor-flex
+            for linea in info.cuerpo
+                p= linea
+            img(
+                src=`img/${info.img.link}` 
+                style=`width:${info.img.width}px; height: ${info.img.height}px;`
+            )
+            - n++
+            if info.subtemas != undefined
+                for subtema in info.subtemas
+                    +tema(subtema, n)
+
+html 
+    include includes/head
+    body
+        include includes/header.pug
+        main 
+            for tema in parcial.temas
+                +tema(tema, 2)

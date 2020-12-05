@@ -1,18 +1,6 @@
 doctype html
 html
     include includes/head.pug
-    //ELEMNT MIXIN
-    mixin tableElement(el)
-        - var rounded = Math.round((el.atomic_mass+Number.EPSILON) * 1000) / 1000
-        - var tipo = el.category.split(" ")[0];
-        td.tableElement(class=`${tipo == "unknown," ? "unknown" : tipo}`)&attributes(attributes)
-            p.number=el.number
-            h2.symbol=el.symbol
-            h3.name=el.name
-            p.mass=rounded 
-    mixin placeholder(range, tipo)
-        td.placeholder(class=tipo)
-            p.number=range
     body
         include includes/header
         main.tablaPeriodica
@@ -22,7 +10,7 @@ html
                     tr(class = `periodo-${num}`)
                         for element in tabla
                             - var cat = element.category.split(" ")[0];
-                            if element.period== num
+                            if element.period == num
                                 if cat == raras[0] || cat == raras[1]
                                     +tableElement(element)(hidden)
                                 else 

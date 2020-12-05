@@ -4,13 +4,34 @@ html
     body
         include includes/header.pug
         main
-            .tabla
-                h1: a(href="/tabla") Tabla Periodica
-            .Periodo1
-                h1: a(href="/PrimerParcial") Primer Parcial
-            .Periodo2
-                h1: a(href="/SegundoParcial") Segundo parcial
-            .creadores
-                .ale
-                .alan
-                .sos
+            #temario.contenedor
+                .contenedor-flex
+                    #slider
+                        input(type="radio" name="slider" id="slide1" checked)
+                        input(type="radio" name="slider" id="slide2")
+                        input(type="radio" name="slider" id="slide3")
+                        #slides
+                            #slides-overflow
+                                #slides-inner
+                                    .slide#slide-1
+                                        a.slide-content(href=link + "1")
+                                            h2 Primer Parcial
+                                    .slide#slide-2
+                                        a.slide-content(href=link + "2")
+                                            h2 Segundo Parcial 
+                                    .slide#slide-3
+                                        a.slide-content(href="/Tabla")
+                                            h2 Tabla Períodica
+                        #controls
+                            label(id="control1" for="slide1")
+                            label(id="control2" for="slide2")
+                            label(id="control3" for="slide3")
+                        #bullets
+                            label(for="slide1")
+                            label(for="slide2")
+                            label(for="slide3")
+            #creadores.contenedor
+                h2 Equipo 11:
+                .contenedor-flex
+                    for creador in equipo.creadores
+                        +perfil(creador)
