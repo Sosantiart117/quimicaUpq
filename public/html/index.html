@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipo 11-Pagina Principal</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Karla&amp;display=swap">
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -17,26 +17,106 @@
     </div>
     <header> 
       <div class="wrapp">
-        <div class="logo"><a href="#title">Equipo 11</a></div>
-        <nav class="navbar"> <a href="/">Inicio</a><a href="/PrimerParcial">Primer parcial </a><a href="/SegundoParcial">Segundo Parcial</a><a href="/Tabla">Tabla Periodica</a>
-          <button class="mode-button">alfo</button>
+        <div class="logo-container"><a class="logo" href="#title">Equipo 11</a></div>
+        <nav class="nav" style="display:none;">
+          <div class="nav-links"> 
+            <ul>
+              <li class="nav-link"><a href="/">Inicio</a></li>
+              <li class="nav-link"> <a href="/parcial1">Primer Parcial<i class="fas fa-caret-down"></i></a></li>
+              <li class="nav-link"> <a href="/parcial2">Segundo Parcial<i class="fas fa-caret-down"></i></a></li>
+              <li class="nav-link"><a href="/Tabla">Tabla Periodica</a></li>
+            </ul>
+          </div>
         </nav>
+        <div class="mode">
+          <button class="mode-button"> <i class="fas fa-adjust"></i></button>
+        </div>
       </div>
     </header>
     <main>
-      <div class="tabla">
-        <h1><a href="/tabla">Tabla Periodica</a></h1>
+      <div class="contenedor" id="temario">
+        <div class="contenedor-flex">
+          <div id="slider">
+            <input type="radio" name="slider" id="slide1" checked>
+            <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <div id="slides">
+              <div id="slides-overflow">
+                <div id="slides-inner">
+                  <div class="slide" id="slide-1"><a class="slide-content" href="/parcial1">
+                      <h2>Primer Parcial</h2></a></div>
+                  <div class="slide" id="slide-2"><a class="slide-content" href="/parcial2">
+                      <h2>Segundo Parcial </h2></a></div>
+                  <div class="slide" id="slide-3"><a class="slide-content" href="/Tabla">
+                      <h2>Tabla Períodica</h2></a></div>
+                </div>
+              </div>
+            </div>
+            <div id="controls">
+              <label id="control1" for="slide1"></label>
+              <label id="control2" for="slide2"></label>
+              <label id="control3" for="slide3"></label>
+            </div>
+            <div id="bullets">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="Periodo1">
-        <h1><a href="/PrimerParcial">Primer Parcial</a></h1>
-      </div>
-      <div class="Periodo2">
-        <h1><a href="/SegundoParcial">Segundo parcial</a></h1>
-      </div>
-      <div class="creadores">
-        <div class="ale"></div>
-        <div class="alan"></div>
-        <div class="sos"></div>
+      <div class="contenedor" id="creadores">
+        <h2>Equipo 11:</h2>
+        <div class="contenedor-flex">
+              <div class="perfil" id="ale"><a class="perfil-tag" href="/#ale"><img class="creator-pic" src="https://via.placeholder.com/150">
+                  <h2 class="creator-name">Alejandro Martinez Sarmiento</h2></a>
+                <div class="creator-body">
+                  <table class="creator-element">
+                    <tr>
+                          <td class="tableElement polyatomic">
+                            <p class="number">6</p>
+                            <h2 class="symbol">C</h2>
+                            <h3 class="name">Carbono</h3>
+                            <p class="mass">12.011</p>
+                          </td>
+                    </tr>
+                  </table>
+                  <p class="creator-desc">Eres indispensable, te encanta compartir con los que te rodean, siempre servicial.</p>
+                </div>
+              </div>
+              <div class="perfil" id="alan"><a class="perfil-tag" href="/#alan"><img class="creator-pic" src="https://via.placeholder.com/150">
+                  <h2 class="creator-name">Alan Pineda Lugardo</h2></a>
+                <div class="creator-body">
+                  <table class="creator-element">
+                    <tr>
+                          <td class="tableElement polyatomic">
+                            <p class="number">6</p>
+                            <h2 class="symbol">C</h2>
+                            <h3 class="name">Carbono</h3>
+                            <p class="mass">12.011</p>
+                          </td>
+                    </tr>
+                  </table>
+                  <p class="creator-desc">Eres indispensable, te encanta compartir con los que te rodean, siempre servicial.</p>
+                </div>
+              </div>
+              <div class="perfil" id="sos"><a class="perfil-tag" href="https://github.com/Sosantiart117"><img class="creator-pic" src="https://via.placeholder.com/150">
+                  <h2 class="creator-name">Santiago Orozco Sánchez</h2></a>
+                <div class="creator-body">
+                  <table class="creator-element">
+                    <tr>
+                          <td class="tableElement noble">
+                            <p class="number">2</p>
+                            <h2 class="symbol">He</h2>
+                            <h3 class="name">Helio</h3>
+                            <p class="mass">4.003</p>
+                          </td>
+                    </tr>
+                  </table>
+                  <p class="creator-desc">El helio es uno de los gases nobles, inhertes... Dicho esto soy una persona, no inherte, pero busco hacerme al margen y prefiero que las cosas fluyan con todos en armonía.</p>
+                </div>
+              </div>
+        </div>
       </div>
     </main>
   </body>
