@@ -2,6 +2,8 @@ const
     express =   require("express"),
     app =       express(),
     tabla =     require('./tablaPeriodica.json'),
+    equipo =    require("./equipo.json"),
+    info =      require("./info.json"),
     fs =        require('fs'),
     pug=        require("pug"),
     PORT =      process.env.PORT || 5500;
@@ -13,7 +15,8 @@ app.set("view engine", "pug");
 //options
 let options = {
     pretty:true,
-    pageName: "Equipo 11"
+    pageName: "Equipo 11",
+    equipo: equipo
 }
 
 //gets
@@ -36,20 +39,13 @@ app.get("/", (req, res) => {
                 console.log(err);
             }
         })
-}).get("/PrimerParcial", (req, res) => {
-    options.title = "Primer parcial";
-    res.render("primerparcial", options);
-    fs.writeFile("public/html/primerparcial.html", 
-        pug.renderFile("views/primerparcial.pug", options), (err) => {
-            if (err) { 
-                console.log(err);
-            }
-        })
-}).get("/SegundoParcial", (req, res) => {
-    options.title = "Segundo Parcial";
-    res.render("segundoparcial", options);
-    fs.writeFile("public/html/segundoparcial.html", 
-        pug.renderFile("views/segundoparcial.pug", options), (err) => {
+}).get("/parcial:parcial", (req, res) => {
+    equipo.show = true;
+    options.parcial = info.parciales[req.params.parcial - 1];
+    options.title = options.parcial.title;
+    res.render("parcial", options);
+    fs.writeFile(`public/html/parcial${req.params.parcial}.html`, 
+        pug.renderFile("views/parcial.pug", options), (err) => {
             if (err) { 
                 console.log(err);
             }
