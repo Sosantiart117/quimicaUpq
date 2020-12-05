@@ -165,9 +165,9 @@
                         {
                             "titulo":"Publicación de resultado",
                             "img":{
-                                "height":null,
-                                "width":null,
-                                "link": ""
+                                "height":350,
+                                "width":400,
+                                "link": "publicacion.jpg"
                             },
                             "cuerpo":[
                                 "Un paso importante en el método científico es la comunicación de nuestros resultados, es una forma de compartir y anunciar al mundo lo que hemos obtenido y cómo lo hemos obtenido. La presentación de los resultados se puede hacer a través de varios medios:",
@@ -238,7 +238,7 @@
                             "img":{
                                 "height":350,
                                 "width":400,
-                                "link": ""
+                                "link": "placa.jpg"
                             },
                             "cuerpo":[
                                 "Pequeño recipiente redondo, transparente y con tapa, que se emplea habitualmente con el fin de colocar muestras de tejidos, bacterias y células para posteriormente generar cultivos.",
@@ -299,126 +299,218 @@
             "title":"Segundo Parcial",
             "temas":[
                 {
-                    "titulo":"",
+                    "titulo":"Energía Potencial",
                     "img":{
                         "height":null,
                         "width":null,
-                        "link":""
+                        "link":"formula.jpg"
                     },
-                    "cuerpo":[],
+                    "cuerpo":["La energía potencial es el tipo de energía que esta asociada a la posición relativa dentro de un sistema, es decir, la posición de un objeto con respecto a otro. Dos magnetos separados tienen energía potencial entre sí.",
+                    "En el SI, la unidad de energía potencial es el jouje (J), al igual que la energía cinética.",
+                    "Un joule corresponde a 1 kg.m2/s2.",
+                    "La energía potencial gravitacional es la energía debida a la posición del objeto con respecto a la superficie de la Tierra:"],
                     "subtemas":[
                         {
-                            "titulo":"",
-                            "img":{
-                                "height":null,
-                                "width":null,
-                                "link": ""
-                            },
-                            "cuerpo":[]
+                            "cuerpo":[
+                                "Ep = Energía Potencial.",
+                                "m  = Es la masa del objeto (kg)",
+                                "g  = Es la constante de aceleración gravitacional de la Tierra (igual a 9,8 m/s2)",
+                                "h  = Es la distancia (m) entre la Tierra y el objeto.",
+                                "La energía gravitacional depende de la masa del objeto y de la altura a la que se encuentra el objeto con respecto a un nivel de referencia."
+                            ]
+                        },
+                        {
+                            "titulo":"Ejemplos de energía potencial",
+                            "subtemas":[
+                                {
+                                    "titulo":"Resortes:",
+                                    "img":{
+                                        "height":350,
+                                        "width":400,
+                                        "link": "tenor.gif"
+                                    },
+                                    "cuerpo":[
+                                        "Cuando un resorte es estirado o comprimido, almacena una cantidad de energía en forma de energía potencial elástica. Cuando se libera el resorte, la energía potencial almacenada se transforma en energía cinética."
+                                    ]
+                                },
+                                {
+                                    "titulo":"Arco y flecha:",
+                                    "img":{
+                                        "height":350,
+                                        "width":400,
+                                        "link": "Arco.gif"
+                                    },
+                                    "cuerpo":[
+                                        "El arco y la flecha es un ejemplo de cómo se transforma la energía potencial elástica en energía cinética. Cuando se estira la cuerda del arco, se hace un trabajo que queda energía potencial en la cuerda estirada. Al soltar la cuerda, la energía potencial de la cuerda se transforma en energía cinética que luego se transfiere a la flecha."
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "titulo":"",
+                    "titulo":"Energía Cinética",
                     "img":{
-                        "height":null,
-                        "width":null,
-                        "link":""
+                        "height":250,
+                        "width":400,
+                        "link":"1.png"
                     },
-                    "cuerpo":[],
+                    "cuerpo":[
+                        " La energía cinética es el tipo de energía que está asociada con el movimiento. Cualquier cosa que se esté moviendo posee energía cinética.En el sistema internacional (SI), la unidad de energía cinética es el jouje (J), la misma que la del trabajo. Un joule corresponde a 1 kg.m2/s2 . La energía cinética (Ec) puede calcularse empleando la fórmula:"
+                    ],
                     "subtemas":[
                         {
-                            "titulo":"",
-                            "img":{
-                                "height":null,
-                                "width":null,
-                                "link": ""
-                            },
-                            "cuerpo":[]
+                            "cuerpo":[
+                                "Donde:",
+                                "Ec = Energía Cinética.",
+                                "m = Corresponde a la masa del objeto",
+                                "v = Velocidad del objeto.",
+                                "De esta fórmula podemos deducir que la energía cinética depende de la cantidad de masa y de la velocidad. Así, un automóvil a la misma velocidad que un camión tiene menos energía cinética. Por otra parte, un automóvil a 80 km/h tiene más energía cinética que uno a 40 km/h."
+                            ]
+                        },
+                        {
+                            "titulo":"Ejemplos de energía cinética",
+                            "cuerpo":[
+                                "En la vida diaria existen muchos ejemplos de la utilización de energía cinética."
+                            ],
+                            "subtemas":[
+                                {
+                                    "titulo":"El viento",
+                                    "img":{
+                                        "height":350,
+                                        "width":400,
+                                        "link": "v.gif"
+                                    },
+                                    "cuerpo":[
+                                        "El viento no es más que aire en movimiento. La energía cinética por el movimiento del aire se puede transformar en energía eléctrica por medio de las turbinas eólicas."
+                                    ]
+                                },
+                                {
+                                    "titulo":"La energía térmica",
+                                    "img":{
+                                        "height":350,
+                                        "width":400,
+                                        "link": "e.gif"
+                                    },
+                                    "cuerpo":[
+                                        "La energía térmica es energía cinética asociada con el movimiento microscópico de las partículas en el sistema. Cuando calentamos agua o cualquier otro objeto, estamos aumentando la energía cinética por transferencia de calor."
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "titulo":"",
-                    "img":{
-                        "height":null,
-                        "width":null,
-                        "link":""
-                    },
-                    "cuerpo":[],
+                    "titulo":"Calor",
+                    "cuerpo":[
+                        "La definición de calor en física es la transferencia de energía térmica que fluye de un cuerpo con mayor temperatura a otro de menor temperatura. El equilibrio térmico se alcanza cuando la temperatura entre ambos cuerpos es la misma. En física no existe tal concepto como \"la cantidad de calor de un cuerpo\".",
+                        "La transmisión del calor puede ocurrir de las siguientes maneras:"
+                    ],
                     "subtemas":[
                         {
-                            "titulo":"",
+                            "titulo":"Conducción térmica:",
                             "img":{
-                                "height":null,
-                                "width":null,
-                                "link": ""
+                                "height":350,
+                                "width":400,
+                                "link":"c.jpg"
                             },
-                            "cuerpo":[]
+                            "cuerpo":[
+                                "La transferencia de calor es dada por la agitación de moléculas que ocasiona la subida de las temperaturas, la dilatación de cuerpos, la fundición de sólidos y la evaporación de líquidos."
+                            ]
+                        },
+                        {
+                            "titulo":"Convección térmica:",
+                            "img":{
+                                "height":350,
+                                "width":400,
+                                "link": "d.jpg"
+                            },
+                            "cuerpo":[
+                                "La transferencia de calor ocurre entre líquidos y gases. Por ejemplo: al hervir agua."
+                            ]
+                        },
+                        {
+                            "titulo":"Radiación térmica:",
+                            "img":{
+                                "height":350,
+                                "width":400,
+                                "link": "r.jpg"
+                            },
+                            "cuerpo":[
+                                "El calor es propagado por las ondas electromagnéticas sin la necesidad de tener contacto ambos cuerpos."
+                            ]
                         }
                     ]
                 },
                 {
-                    "titulo":"",
-                    "img":{
-                        "height":null,
-                        "width":null,
-                        "link":""
-                    },
-                    "cuerpo":[],
+                    "titulo":"Tabla Periódica",
+                    "cuerpo":[
+                        "La tabla periódica, o tabla periódica de los elementos, es un registro organizado de los elementos químicos según su número atómico, propiedades y características.",
+                        "stá compuesta por 118 elementos confirmados por la Unión Internacional de Química Pura y Aplicada (IUPAC, por sus siglas en inglés), de los cuales:",
+                        "<ul><li>94 son elementos que existen en la naturaleza. </li><li>24 elementos son sintéticos, es decir, han sido creados de manera artificial. </li></ul>",
+                        "Su creación le es atribuida al científico ruso Dimitri Mendeléyev en 1869. A partir de entonces, la tabla periódica ha sido mejorada y actualizada por otros científicos a medida que se descubren y estudian nuevos elementos."
+                    ],
                     "subtemas":[
                         {
-                            "titulo":"",
-                            "img":{
-                                "height":null,
-                                "width":null,
-                                "link": ""
-                            },
-                            "cuerpo":[]
-                        }
-                    ]
-                },
-                {
-                    "titulo":"",
-                    "img":{
-                        "height":null,
-                        "width":null,
-                        "link":""
-                    },
-                    "cuerpo":[],
-                    "subtemas":[
+                            "titulo":"Cómo está organizada la tabla periódica?",
+                            "cuerpo":[
+                                "La tabla periódica presenta todos los elementos conocidos hasta el momento, los cuales están organizados y ubicados según sus características y relación entre los mismos en grupo, períodos, bloques y metales, metaloides y no metales."
+                            ]
+                        },
                         {
-                            "titulo":"",
+                            "titulo":"Grupos",
                             "img":{
-                                "height":null,
-                                "width":null,
-                                "link": ""
+                                "height":730,
+                                "width":1000,
+                                "link": "G.jpg"
                             },
-                            "cuerpo":[]
-                        }
-                    ]
-                },
-                {
-                    "titulo":"",
-                    "img":{
-                        "height":null,
-                        "width":null,
-                        "link":""
-                    },
-                    "cuerpo":[],
-                    "subtemas":[
+                            "cuerpo":[
+                                "La tabla periódica está compuesta por 18 grupos de elementos organizados en columnas verticales, numerados del 1 al 18 de izquierda a derecha, comenzando por los metales alcalinos y terminando con los gases nobles.",
+                                "Los elementos que pertenecen a una misma columna tienen características químicas similares, a partir de cómo se estructuran los electrones en la última capa del átomo.",
+                                "Por ejemplo, en la primera columna se ubican los elementos que tienen un electrón en la última capa del átomo. En este caso, el potasio tiene cuatro capas y en la última tiene un electrón.",
+                                "Los elementos químicos se organizan en grupos de la siguiente manera:",
+                                "<ul><li>Grupo 2 (II A): metales alcalinotérreos.</li><li>Grupo 3 (III B): familia del escandio.</li><li>Grupo 1 (I A): metales alcalinos.</li><li>Grupo 4 (IV B): familia del titanio.</li><li>Grupo 5 (V B): familia del vanadio.</li><li>Grupo 6 (VI B): familia del cromo.</li><li>Grupo 7 (VII B): familia del manganeso.</li><li>Grupo 8 (VIII B): familia del hierro.</li><li>Grupo 9 (VIII B): familia del cobalto.</li><li>Grupo 10 (VIII B): familia del níquel.</li><li>Grupo 11 (I B): familia del cobre.</li><li>Grupo 12 (II B): familia del zinc.</li><li>Grupo 13 (III A): térreos.</li><li>Grupo 14 (IV A): carbonoideos.</li><li>Grupo 15 (V A): nitrogenoideos.</li><li>Grupo 16 (VI A): calcógenos o anfígenos.</li><li>Grupo 17 (VII A): halógenos.</li><li>Grupo 18 (VIII A): gases nobles.</li></ul>"
+                            ],
+                            "subtemas":[]
+                        },
                         {
-                            "titulo":"",
+                            "titulo":"Períodos",
                             "img":{
-                                "height":null,
-                                "width":null,
-                                "link": ""
+                                "height":730,
+                                "width":1000,
+                                "link": "p.jpg"
                             },
-                            "cuerpo":[]
+                            "cuerpo":[
+                                "Los períodos son las siete filas horizontales que tiene la tabla periódica. En estas filas se agrupan los elementos que tienen el número de capas de electrones que coincide con el número del período.",
+                                "Por ejemplo, en la primera fila el hidrógeno y el helio tienen una capa de electrones. En el período dos hay ocho elementos que tienen dos capas de electrones. En la tercera fila los elementos tienen tres capas de electrones, y así sucesivamente.",
+                                "En el periodo seis se encuentran los elementos que tienen seis capas de electrones, al igual que la fila inferior de los lantánidos. En el período siete se encuentran los elementos que tienen siete capas de electrones, al igual que la última fila de los actínidos."
+                            ],
+                            "subtemas":[
+                                {
+                                    "titulo":"Metales, metaloides y no metales",
+                                    "cuerpo":[
+                                        "Se pueden diferenciar tres categorías de los elementos que componen la tabla periódica a partir de sus propiedades químicas y físicas que son: metales, metaloides y no metales.",
+                                        "<ul><li><strong>Metales:</strong> son elementos sólidos a temperatura ambiente, menos el mercurio que se encuentra en estado líquido. Son maleables y dúctiles, y son buenos conductores de calor y de electricidad. Se encuentran del lado izquierdo de la tabla.</li><li><strong>No metales:</strong> en su mayoría se trata de gases, aunque también hay líquidos. Estos elementos no son buenos conductores de electricidad. Se encuentran del lado derecho de la tabla.</li><li><strong>Metaloides o semimetales:</strong> tienen propiedades tanto de los metales como de los no metales. Pueden ser brillantes, opacos y poco dúctiles. Su conductividad eléctrica es menor a los metales, pero mayor a los no metales. Se encuentran del lado derecho de la tabla, entre los metales y no metales.</li></ul>"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "titulo":"Bloques",
+                            "img":{
+                                "height":730,
+                                "width":1000,
+                                "link": "b.jpg"
+                            },
+                            "cuerpo":[
+                                "La tabla periódica también se puede dividir en cuatro bloques según la secuencia de capas de electrones de cada elemento. El nombre de cada bloque deriva según el orbital en el que se ubica el último electrón.",
+                                "<ul><li>Bloque s: grupos 1 y 2 de los metales alcalinos, alcalinotérreos, hidrógeno y helio.</li><li>Bloque p: abarca los grupos del 13 al 18 y metaloides.</li><li>Bloque d: compuesta por los grupos del 3 al 12 y los metales de transición.</li><li>Bloque f: no tiene número de grupo y corresponde a los lantánidos y actínidos. Generalmente, se colocan debajo de la tabla periódica.</li></ul>"
+                            ],
+                            "subtemas":[]
                         }
                     ]
                 }
-            ]   
+            ]  
         }
     ]
 }

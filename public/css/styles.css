@@ -4,7 +4,7 @@
     --primarySoft: #e9e9e92a;
     --contrast: #232a34;
     --contrastSoft: #3d6682;
-    --main: black; 
+    --main: #0e0e0e; 
 }
 /* idea para modo oscuro #slide3:checked ~ #slides #slides-inner */
 html {
@@ -39,7 +39,7 @@ h2:first-child {
     font-size: 4rem;
 }
 h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 p{
     font-size: 1.1rem;
@@ -162,11 +162,17 @@ header {
     background: var(--primary); 
     color: var(--contrast);
 }
-/*----------------------- tema -----------------------------*/
+/*----------------------- main ----------------------------*/
 main{
     position: relative;
     z-index: 10;
     background-color: var(--primary);
+}
+.contenedor-flex-column{
+    margin: auto 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .contenedor-flex {
     margin: auto 3rem;
@@ -177,6 +183,40 @@ main{
     margin: auto 15px;
     padding: 15px 0;
 }
+/*------------------------ Tema ---------------------------*/
+.temario{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.temario > h2 {
+    margin: 3rem 0;
+}
+.contenedor.tema-2{
+    flex: 1;
+}
+.tema-2 > .contenedor-flex {
+    margin:0;
+    width: 100%;
+    flex-direction: column;
+}
+.cuerpo-tema{
+    flex: 2;
+    margin: 0 10%;
+}
+.tema-3 > .contenedor-flex {
+    margin:0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.tema-3 .cuerpo-tema {
+    flex: 1;
+}
+.tema-3 .img-tema {
+    flex: 1;
+}
+
 /*----------------------- footer --------------------------*/
 footer{
     position: relative;
@@ -186,7 +226,7 @@ footer{
 
 /*----------------------- Index ---------------------------*/
 /*slider*/
-#temario {
+#slider-temario{
     position: sticky;
     top: -10vh;
     height: 50vh;
@@ -257,7 +297,7 @@ a.slide-content {
     background: var(--contrast);
 }
 #slide-2 > a.slide-content > h2{
-    color: var(--primarySoft);
+    color: var(--primary);
 }
 #slide-3 {
    background: var(--accent);

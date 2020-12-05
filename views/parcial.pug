@@ -1,24 +1,33 @@
 doctype html
 //- Mixins
 mixin tema(info, n)
-    .tema.contenedor
-        !=`<h${n}>${info.titulo}</h${n}>`
-        .cuerpo-tema.contenedor-flex
-            for linea in info.cuerpo
-                p= linea
-            img(
-                src=`img/${info.img.link}` 
-                style=`width:${info.img.width}px; height: ${info.img.height}px;`
-            )
+    -let subs = info.subtemas
+    .contenedor(class=`tema-${n}`)
+        if info.titulo != undefined
+            !=`<h${n}>${info.titulo}</h${n}>`
+        //-.contenedor-flex
+        div(class= subs ? "contenedor-flex-column": "contenedor-flex")
+            if info.cuerpo != undefined
+                .cuerpo-tema
+                    for linea in info.cuerpo
+                        p!= linea
+                        br 
+            if info.img != undefined
+                .img-tema
+                    img(
+                        src=`img/${info.img.link}` 
+                        style= `width:${info.img.width}px; height: ${info.img.height}px;`
+                    )
             - n++
-            if info.subtemas != undefined
-                for subtema in info.subtemas
-                    +tema(subtema, n)
+            if subs
+                .subtemas
+                    for subtema in info.subtemas
+                        +tema(subtema, n)
 
 html 
     include includes/head
     body
         include includes/header.pug
-        main 
+        main.temario
             for tema in parcial.temas
                 +tema(tema, 2)
