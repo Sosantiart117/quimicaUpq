@@ -1,9 +1,9 @@
 const 
     express =   require("express"),
     app =       express(),
-    tabla =     require('./tablaPeriodica.json'),
-    equipo =    require("./equipo.json"),
-    info =      require("./info.json"),
+    tabla =     require('./json/tablaPeriodica.json'),
+    equipo =    require("./json/equipo.json"),
+    info =      require("./json/info.json"),
     fs =        require('fs'),
     pug=        require("pug"),
     PORT =      process.env.PORT || 5500;
