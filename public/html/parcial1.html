@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Karla&amp;display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="javascript/main.js"></script>
   </head>
   <body>
     <div class="title" id="title">
@@ -22,40 +23,57 @@
           <div class="nav-links"> 
             <ul>
               <li class="nav-link"><a href="/">Inicio</a></li>
-              <li class="nav-link"> <a href="/parcial1">Primer Parcial<i class="fas fa-caret-down"></i></a></li>
-              <li class="nav-link"> <a href="/parcial2">Segundo Parcial<i class="fas fa-caret-down"></i></a></li>
+              <li class="nav-link"> <a href="/parcial1">Primer Parcial<i class="fas fa-caret-down"></i></a>
+                <div class="nav-dropdown">
+                  <ul>
+                    <li class="drop-link"><a class="drop-link Introducción-a-la-Química" href="#Introducción-a-la-Química">Introducción a la Química</a></li>
+                    <li class="drop-link"><a class="drop-link Teoría-Atómica" href="#Teoría-Atómica">Teoría Atómica</a></li>
+                    <li class="drop-link"><a class="drop-link Mezclas" href="#Mezclas">Mezclas</a></li>
+                    <li class="drop-link"><a class="drop-link Método-Científico" href="#Método-Científico">Método Científico</a></li>
+                    <li class="drop-link"><a class="drop-link Material-de-Laboratorio" href="#Material-de-Laboratorio">Material de Laboratorio</a></li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link"> <a href="/parcial2">Segundo Parcial<i class="fas fa-caret-down"></i></a>
+                <div class="nav-dropdown">
+                  <ul>
+                    <li class="drop-link"><a class="drop-link Energía-Potencial" href="/parcial2#Energía-Potencial">Energía Potencial</a></li>
+                    <li class="drop-link"><a class="drop-link Energía-Cinética" href="/parcial2#Energía-Cinética">Energía Cinética</a></li>
+                    <li class="drop-link"><a class="drop-link Calor" href="/parcial2#Calor">Calor</a></li>
+                    <li class="drop-link"><a class="drop-link Tabla-Periódica" href="/parcial2#Tabla-Periódica">Tabla Periódica</a></li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
               <li class="nav-link"><a href="/Tabla">Tabla Periodica</a></li>
             </ul>
           </div>
         </nav>
         <div class="mode">
-          <button class="mode-button"> <i class="fas fa-adjust"></i></button>
+          <button class="mode-button" id="mode"><i class="fas fa-adjust"></i></button>
         </div>
       </div>
     </header>
-    <main class="temario">
-      <div class="contenedor tema-2"><h2>Introducción a la Química</h2>
-        <div class="contenedor-flex-column">
+    <main>
+      <div class="contenedor tema-2" id="Introducción-a-la-Química"><h2>Introducción a la Química</h2>
+        <div class="contenedor-flex">
           <div class="cuerpo-tema">
             <p>La química es la ciencia que estudia la composición, estructura y propiedades de la materia, así como los cambios que esta experimenta durante las reacciones químicas y su relación con la energía.​ Linus Pauling la define como la ciencia que estudia las sustancias, su estructura (tipos y formas de acomodo de los átomos), sus propiedades y las reacciones que las transforman en otras sustancias en referencia con el tiempo. La química se ocupa principalmente de las agrupaciones supratómicas, como son los gases, las moléculas, los cristales y los metales, estudiando su composición, propiedades estadísticas, transformaciones y reacciones. La química también incluye la comprensión de las propiedades e interacciones de la materia a escala atómica.</p><br>
           </div>
           <div class="img-tema"><img src="img/quimica.gif" style="width:400px; height: 350px;"></div>
-          <div class="subtemas">
-          </div>
         </div>
       </div>
-      <div class="contenedor tema-2"><h2>Teoría Atómica</h2>
-        <div class="contenedor-flex-column">
+      <div class="contenedor tema-2" id="Teoría-Atómica"><h2>Teoría Atómica</h2>
+        <div class="contenedor-flex">
           <div class="cuerpo-tema">
             <p>En química y física, la teoría atómica es una teoría científica sobre la naturaleza de la materia que sostiene que está compuesta de unidades discretas llamadas átomos. Empezó como concepto filosófico en la Antigua Grecia y logró ampliar aceptación científica a principios del siglo XIX cuando los descubrimientos en el campo de la química demostraron que la materia realmente se comportaba como si estuviese hecha de átomos.</p><br>
             <p>La palabra átomo proviene del adjetivo en griego antiguo átomos, que significa «indivisible». Los químicos del siglo XIX empezaron a utilizar el término en relación con el número creciente de elementos químicos irreducibles. Cerca del cambio al siguiente siglo, a través de varios experimentos con electromagnetismo y radiactividad, los físicos descubrieron que los "átomos indivisibles" eran de hecho un conglomerado de varias partículas subatómicas (principalmente, electrones, protones y neutrones), las que pueden existir separadas unas de otras. De hecho, en ciertos entornos extremos, como las estrellas de neutrones, la presión y la temperatura extremas impiden que los átomos puedan existir en absoluto.</p><br>
           </div>
           <div class="img-tema"><img src="img/atomo.gif" style="width:400px; height: 350px;"></div>
-          <div class="subtemas">
-          </div>
         </div>
       </div>
-      <div class="contenedor tema-2"><h2>Mezclas</h2>
+      <div class="contenedor tema-2" id="Mezclas"><h2>Mezclas</h2>
         <div class="contenedor-flex-column">
           <div class="cuerpo-tema">
             <p>Una mezcla es un material formado por dos o más componentes unidos, pero no combinados químicamente. En una mezcla no ocurre una reacción química y cada uno de sus componentes mantiene su identidad y propiedades químicas. No obstante, algunas mezclas pueden ser reactivas, es decir, que sus componentes pueden reaccionar entre sí en determinadas condiciones ambientales, como una mezcla aire-combustible en un motor de combustión interna. Es la combinación física de dos o más sustancias que retienen sus identidades y que se mezclan logrando formar según sea el caso aleaciones, soluciones, suspensiones y coloides.</p><br>
@@ -63,7 +81,7 @@
           </div>
           <div class="img-tema"><img src="img/mezclas.gif" style="width:400px; height: 350px;"></div>
           <div class="subtemas">
-            <div class="contenedor tema-3"><h3>Mezclas Homogéneas:</h3>
+            <div class="contenedor tema-3"><h3>Homogéneas:</h3>
               <div class="contenedor-flex">
                 <div class="cuerpo-tema">
                   <p>Son aquellas mezclas de elementos uniformes, sus componentes no se pueden diferenciar a simple vista. Se conocen con el nombre de soluciones y están constituidas por un soluto y un disolvente.​ Por ejemplo, el agua mezclada con sales minerales o con azúcar o con vinagre</p><br>
@@ -71,7 +89,7 @@
                 <div class="img-tema"><img src="img/homogeneo.jpg" style="width:400px; height: 350px;"></div>
               </div>
             </div>
-            <div class="contenedor tema-3"><h3>Mezclas Heterogéneas:</h3>
+            <div class="contenedor tema-3"><h3>Heterogéneas:</h3>
               <div class="contenedor-flex">
                 <div class="cuerpo-tema">
                   <p>Una mezcla heterogénea es aquella que posee una composición no uniforme en la cual se pueden distinguir fácilmente sus componentes. Está formada por dos o más sustancias físicamente distintas, distribuidas en forma desigual. Las partes de una mezcla heterogénea pueden separarse fácilmente. Pueden ser gruesas o suspensiones de acuerdo al tamaño de la sustancia.</p><br>
@@ -90,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="contenedor tema-2"><h2>Método Científico</h2>
+      <div class="contenedor tema-2" id="Método-Científico"><h2>Método Científico</h2>
         <div class="contenedor-flex-column">
           <div class="cuerpo-tema">
             <p>El método científico es una metodología para obtener nuevos conocimientos, que ha caracterizado históricamente a la ciencia, y que consiste en la observación sistemática, medición, experimentación y la formulación, análisis y modificación de hipótesis. Las principales características de un método científico válido son la falsabilidad, y la reproducibilidad y repetibilidad de los resultados, corroborada por revisión por pares. Algunos tipos de técnicas o metodologías utilizadas son la deducción, la inducción, la abducción, y la predicción, entre otras.</p><br>
@@ -166,7 +184,7 @@
           </div>
         </div>
       </div>
-      <div class="contenedor tema-2"><h2>Material de Laboratorio</h2>
+      <div class="contenedor tema-2" id="Material-de-Laboratorio"><h2>Material de Laboratorio</h2>
         <div class="contenedor-flex-column">
           <div class="cuerpo-tema">
             <p>Podemos entender por material de laboratorio el conjunto de utensilios e instrumentos de los que precisa un laboratorio para poder llevar a cabo la investigación o experimentación necesaria de cara a generar conocimiento y analizar el fenómeno de la realidad que se esté estudiando.</p><br>

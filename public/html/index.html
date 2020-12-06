@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Karla&amp;display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="javascript/main.js"></script>
   </head>
   <body>
     <div class="title" id="title">
@@ -22,14 +23,35 @@
           <div class="nav-links"> 
             <ul>
               <li class="nav-link"><a href="/">Inicio</a></li>
-              <li class="nav-link"> <a href="/parcial1">Primer Parcial<i class="fas fa-caret-down"></i></a></li>
-              <li class="nav-link"> <a href="/parcial2">Segundo Parcial<i class="fas fa-caret-down"></i></a></li>
+              <li class="nav-link"> <a href="/parcial1">Primer Parcial<i class="fas fa-caret-down"></i></a>
+                <div class="nav-dropdown">
+                  <ul>
+                    <li class="drop-link"><a class="drop-link Introducción-a-la-Química" href="/parcial1#Introducción-a-la-Química">Introducción a la Química</a></li>
+                    <li class="drop-link"><a class="drop-link Teoría-Atómica" href="/parcial1#Teoría-Atómica">Teoría Atómica</a></li>
+                    <li class="drop-link"><a class="drop-link Mezclas" href="/parcial1#Mezclas">Mezclas</a></li>
+                    <li class="drop-link"><a class="drop-link Método-Científico" href="/parcial1#Método-Científico">Método Científico</a></li>
+                    <li class="drop-link"><a class="drop-link Material-de-Laboratorio" href="/parcial1#Material-de-Laboratorio">Material de Laboratorio</a></li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link"> <a href="/parcial2">Segundo Parcial<i class="fas fa-caret-down"></i></a>
+                <div class="nav-dropdown">
+                  <ul>
+                    <li class="drop-link"><a class="drop-link Energía-Potencial" href="/parcial2#Energía-Potencial">Energía Potencial</a></li>
+                    <li class="drop-link"><a class="drop-link Energía-Cinética" href="/parcial2#Energía-Cinética">Energía Cinética</a></li>
+                    <li class="drop-link"><a class="drop-link Calor" href="/parcial2#Calor">Calor</a></li>
+                    <li class="drop-link"><a class="drop-link Tabla-Periódica" href="/parcial2#Tabla-Periódica">Tabla Periódica</a></li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
               <li class="nav-link"><a href="/Tabla">Tabla Periodica</a></li>
             </ul>
           </div>
         </nav>
         <div class="mode">
-          <button class="mode-button"> <i class="fas fa-adjust"></i></button>
+          <button class="mode-button" id="mode"><i class="fas fa-adjust"></i></button>
         </div>
       </div>
     </header>
@@ -68,7 +90,7 @@
       <div class="contenedor" id="creadores">
         <h2>Equipo 11:</h2>
         <div class="contenedor-flex">
-              <div class="perfil" id="ale"><a class="perfil-tag" href="/#ale"><img class="creator-pic" src="https://via.placeholder.com/150">
+              <div class="perfil" id="ale"><a class="perfil-tag" href="/#ale"><img class="creator-pic">
                   <h2 class="creator-name">Alejandro Martinez Sarmiento</h2></a>
                 <div class="creator-body">
                   <table class="creator-element">
@@ -84,7 +106,7 @@
                   <p class="creator-desc">Eres indispensable, te encanta compartir con los que te rodean, siempre servicial.</p>
                 </div>
               </div>
-              <div class="perfil" id="alan"><a class="perfil-tag" href="/#alan"><img class="creator-pic" src="https://via.placeholder.com/150">
+              <div class="perfil" id="alan"><a class="perfil-tag" href="/#alan"><img class="creator-pic">
                   <h2 class="creator-name">Alan Pineda Lugardo</h2></a>
                 <div class="creator-body">
                   <table class="creator-element">
@@ -100,7 +122,7 @@
                   <p class="creator-desc">Eres indispensable, te encanta compartir con los que te rodean, siempre servicial.</p>
                 </div>
               </div>
-              <div class="perfil" id="sos"><a class="perfil-tag" href="https://github.com/Sosantiart117"><img class="creator-pic" src="https://via.placeholder.com/150">
+              <div class="perfil" id="sos"><a class="perfil-tag" href="#sos"><img class="creator-pic">
                   <h2 class="creator-name">Santiago Orozco Sánchez</h2></a>
                 <div class="creator-body">
                   <table class="creator-element">

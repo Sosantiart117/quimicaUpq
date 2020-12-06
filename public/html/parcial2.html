@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Karla&amp;display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="javascript/main.js"></script>
   </head>
   <body>
     <div class="title" id="title">
@@ -22,19 +23,40 @@
           <div class="nav-links"> 
             <ul>
               <li class="nav-link"><a href="/">Inicio</a></li>
-              <li class="nav-link"> <a href="/parcial1">Primer Parcial<i class="fas fa-caret-down"></i></a></li>
-              <li class="nav-link"> <a href="/parcial2">Segundo Parcial<i class="fas fa-caret-down"></i></a></li>
+              <li class="nav-link"> <a href="/parcial1">Primer Parcial<i class="fas fa-caret-down"></i></a>
+                <div class="nav-dropdown">
+                  <ul>
+                    <li class="drop-link"><a class="drop-link Introducción-a-la-Química" href="/parcial1#Introducción-a-la-Química">Introducción a la Química</a></li>
+                    <li class="drop-link"><a class="drop-link Teoría-Atómica" href="/parcial1#Teoría-Atómica">Teoría Atómica</a></li>
+                    <li class="drop-link"><a class="drop-link Mezclas" href="/parcial1#Mezclas">Mezclas</a></li>
+                    <li class="drop-link"><a class="drop-link Método-Científico" href="/parcial1#Método-Científico">Método Científico</a></li>
+                    <li class="drop-link"><a class="drop-link Material-de-Laboratorio" href="/parcial1#Material-de-Laboratorio">Material de Laboratorio</a></li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link"> <a href="/parcial2">Segundo Parcial<i class="fas fa-caret-down"></i></a>
+                <div class="nav-dropdown">
+                  <ul>
+                    <li class="drop-link"><a class="drop-link Energía-Potencial" href="#Energía-Potencial">Energía Potencial</a></li>
+                    <li class="drop-link"><a class="drop-link Energía-Cinética" href="#Energía-Cinética">Energía Cinética</a></li>
+                    <li class="drop-link"><a class="drop-link Calor" href="#Calor">Calor</a></li>
+                    <li class="drop-link"><a class="drop-link Tabla-Periódica" href="#Tabla-Periódica">Tabla Periódica</a></li>
+                    <div class="arrow"></div>
+                  </ul>
+                </div>
+              </li>
               <li class="nav-link"><a href="/Tabla">Tabla Periodica</a></li>
             </ul>
           </div>
         </nav>
         <div class="mode">
-          <button class="mode-button"> <i class="fas fa-adjust"></i></button>
+          <button class="mode-button" id="mode"><i class="fas fa-adjust"></i></button>
         </div>
       </div>
     </header>
-    <main class="temario">
-      <div class="contenedor tema-2"><h2>Energía Potencial</h2>
+    <main>
+      <div class="contenedor tema-2" id="Energía-Potencial"><h2>Energía Potencial</h2>
         <div class="contenedor-flex-column">
           <div class="cuerpo-tema">
             <p>La energía potencial es el tipo de energía que esta asociada a la posición relativa dentro de un sistema, es decir, la posición de un objeto con respecto a otro. Dos magnetos separados tienen energía potencial entre sí.</p><br>
@@ -80,7 +102,7 @@
           </div>
         </div>
       </div>
-      <div class="contenedor tema-2"><h2>Energía Cinética</h2>
+      <div class="contenedor tema-2" id="Energía-Cinética"><h2>Energía Cinética</h2>
         <div class="contenedor-flex-column">
           <div class="cuerpo-tema">
             <p> La energía cinética es el tipo de energía que está asociada con el movimiento. Cualquier cosa que se esté moviendo posee energía cinética.En el sistema internacional (SI), la unidad de energía cinética es el jouje (J), la misma que la del trabajo. Un joule corresponde a 1 kg.m2/s2 . La energía cinética (Ec) puede calcularse empleando la fórmula:</p><br>
@@ -126,7 +148,7 @@
           </div>
         </div>
       </div>
-      <div class="contenedor tema-2"><h2>Calor</h2>
+      <div class="contenedor tema-2" id="Calor"><h2>Calor</h2>
         <div class="contenedor-flex-column">
           <div class="cuerpo-tema">
             <p>La definición de calor en física es la transferencia de energía térmica que fluye de un cuerpo con mayor temperatura a otro de menor temperatura. El equilibrio térmico se alcanza cuando la temperatura entre ambos cuerpos es la misma. En física no existe tal concepto como "la cantidad de calor de un cuerpo".</p><br>
@@ -160,7 +182,7 @@
           </div>
         </div>
       </div>
-      <div class="contenedor tema-2"><h2>Tabla Periódica</h2>
+      <div class="contenedor tema-2" id="Tabla-Periódica"><h2>Tabla Periódica</h2>
         <div class="contenedor-flex-column">
           <div class="cuerpo-tema">
             <p>La tabla periódica, o tabla periódica de los elementos, es un registro organizado de los elementos químicos según su número atómico, propiedades y características.</p><br>

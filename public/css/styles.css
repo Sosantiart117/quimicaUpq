@@ -1,12 +1,26 @@
-:root{
-    --accent: #F07B13;
-    --primary: #e9e9e9;
-    --primarySoft: #e9e9e92a;
-    --contrast: #232a34;
-    --contrastSoft: #3d6682;
-    --main: #0e0e0e; 
+.dark{
+    --primary: #232a34;
+    --contrast: #b1adad;
+    --main: #fafafa; 
 }
-/* idea para modo oscuro #slide3:checked ~ #slides #slides-inner */
+.cardenal{
+    --accent: #182E46
+    --primary: ##FFFFFF;
+    --primarySoft: #3d6682
+    --contrast: #A32036;
+    --contrastSoft:#e9e9e92a;
+    --main: #fff; 
+}
+:root{
+    --primary: #e9e9e9;
+    --contrast: #232a34;
+    --main: #0e0e0e; 
+    --accent: #F07B13;
+    --primarySoft: #e9e9e92a;
+    --contrastSoft: #3d6682;
+}
+
+
 html {
     box-sizing: border-box;
 }
@@ -15,7 +29,20 @@ body{
     height: 100%;
     font-family: 'Karla', sans-serif;
     color: var(--main);
+    transition: color 1000ms ease-in-out, background 500ms ease-in-out;
 }
+/*scrollbar*/
+body::-webkit-scrollbar{
+    width: .5rem;
+}
+body::-webkit-scrollbar-track{
+    background: var(--contrast);
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--accent);
+    border-radius: 100px;
+}
+
 *, html, body{
     margin: 0; 
     padding: 0;
@@ -48,6 +75,7 @@ p{
 a{
     font-size: 1.05rem;
     text-decoration: none;
+    transition: 600ms;
 }
 a:hover{
     border: .5px var(--primary);
@@ -56,9 +84,11 @@ a:hover{
 ul{
     list-style: none;
 }
+img {
+    transition: 600ms;
+}
 img:hover{
 	transform: scale(0.8);
-	transition: 500ms;
 }
 
 /*------------------------- title -------------------------*/
@@ -96,7 +126,6 @@ header {
     max-width: 80rem;
     margin: auto;
     display: flex;
-    position: relative;
     height: 100%;
 }
 .logo-container{
@@ -110,6 +139,7 @@ header {
     color: var(--primary);
     letter-spacing: 10px;
 }
+
 .nav {
     height: 100%;
     flex: 5;
@@ -128,7 +158,8 @@ header {
 .nav-link > a {
     color: var(--primary);
     letter-spacing: 2px;
-    display: flex;align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     line-height: 3rem;
     padding: 0 .8rem;
@@ -141,7 +172,59 @@ header {
     color: var(--accent);
     box-shadow: 1px 2px var(--primary);
     background-color: var(--primarySoft);
+    transform: scale(1.1);
 }
+.nav-link{
+    position: relative;
+}
+.nav-dropdown{
+    background: var(--primary);
+    box-shadow: 3px 2px var(--contrast);
+    position: absolute;
+    left:-5%;
+    top:103%;
+    width: 110%;
+    transition: 600ms;
+    opacity: 0;
+    pointer-events: none;
+}
+.drop-link{
+    color: var(--contrast);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .2rem .8rem;
+    transition: 600ms;
+    width: 100%;
+    height: 100%;
+}
+.drop-link:hover{
+    transform: scale(1.05);
+    background-color: var(--contrast);
+    color:var(--accent);
+}
+.arrow{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -5.5px;
+    left: 45%;
+    background-color: var(--primary);
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: .3s;
+    z-index: -1;
+}
+.nav-dropdown  li:first-child:hover ~ .arrow{
+    background-color: var(--contrast);
+}
+.nav-link:hover > .nav-dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .mode{
     flex: 1;
     display: flex;
@@ -156,7 +239,8 @@ header {
     background: var(--contrast);
     padding:10px;
     border-radius: 5px;
-    border: 1px solid var(--primary)
+    border: 1px solid var(--primary);
+    transition: 600ms;
 }
 .mode-button:hover{
     background: var(--primary); 
@@ -177,6 +261,7 @@ main{
 .contenedor-flex {
     margin: auto 3rem;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 .contenedor{
@@ -216,6 +301,9 @@ main{
 .tema-3 .img-tema {
     flex: 1;
 }
+.img-tema{
+    margin-top: 15px;
+}
 
 /*----------------------- footer --------------------------*/
 footer{
@@ -236,12 +324,13 @@ footer{
     width: 80%;
     max-width: 100%;
     text-align: center;
+    position: relative;
 }
 #slider input[type=radio] {
     display: none;
 }
 #slider label {
-    cursor:pointer;
+    cursor: pointer;
     text-decoration: none;
 }
 #slides{
@@ -306,11 +395,11 @@ a.slide-content {
     color: var(--primary);
 }
 #controls {
-    top: -50%;
     width: 100%;
     height: 20%;
     z-index: 10;
-    position: relative;
+    position: absolute;
+    top: 35%;
 }
 #controls label {
     transition: opacity 0.2s ease-out;
@@ -405,6 +494,7 @@ a.slide-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #fff;
 }
 .creator-element{
     flex:1;

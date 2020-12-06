@@ -31,7 +31,6 @@ for(let par in info.parciales) {
     })
 }
 options.temario = temario;
-console.log(temario)
 //gets
 app.get("/", (req, res) => {
     options.title = "Pagina Principal"

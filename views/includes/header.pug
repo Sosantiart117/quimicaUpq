@@ -15,7 +15,7 @@ mixin placeholder(range, tipo)
 mixin perfil(user)
     div(id=`${user.short}` class="perfil")
         a(href=`${user.link}` class="perfil-tag")
-            img.creator-pic(src=`${user.profile_pic}`)
+            img.creator-pic(src=user.profile_pic.link ? "../img/" + user.profile_pic.link : null )
             h2.creator-name=user.name
         .creator-body
             table.creator-element: tr: +tableElement(user.element)
@@ -41,11 +41,12 @@ header
                         li.nav-link 
                             a(href=url)=parcial.title
                                 i.fas.fa-caret-down
-                            ul.nav-dropdown
+                            .nav-dropdown: ul
                                 for tema in parcial.temas
                                     li.drop-link
-                                        a.drop-link(class=tema href=`#${tema}`)= tema
+                                        a.drop-link(class=tema href=`${title != parcial.title ? url : ""}#${tema}`)= tema.split("-").join(" ")
+                                .arrow
                     li.nav-link: a(href="/Tabla") Tabla Periodica
         .mode
-            button.mode-button 
+            button.mode-button#mode
                 i.fas.fa-adjust
