@@ -14,8 +14,7 @@
                     },
                     "cuerpo":[
                         "La química es la ciencia que estudia la composición, estructura y propiedades de la materia, así como los cambios que esta experimenta durante las reacciones químicas y su relación con la energía.​ Linus Pauling la define como la ciencia que estudia las sustancias, su estructura (tipos y formas de acomodo de los átomos), sus propiedades y las reacciones que las transforman en otras sustancias en referencia con el tiempo. La química se ocupa principalmente de las agrupaciones supratómicas, como son los gases, las moléculas, los cristales y los metales, estudiando su composición, propiedades estadísticas, transformaciones y reacciones. La química también incluye la comprensión de las propiedades e interacciones de la materia a escala atómica."
-                    ],
-                    "subtemas":[]
+                    ]
                 },
                 {
                     "titulo":"Teoría Atómica",
@@ -27,8 +26,7 @@
                     "cuerpo":[
                         "En química y física, la teoría atómica es una teoría científica sobre la naturaleza de la materia que sostiene que está compuesta de unidades discretas llamadas átomos. Empezó como concepto filosófico en la Antigua Grecia y logró ampliar aceptación científica a principios del siglo XIX cuando los descubrimientos en el campo de la química demostraron que la materia realmente se comportaba como si estuviese hecha de átomos.",
                         "La palabra átomo proviene del adjetivo en griego antiguo átomos, que significa «indivisible». Los químicos del siglo XIX empezaron a utilizar el término en relación con el número creciente de elementos químicos irreducibles. Cerca del cambio al siguiente siglo, a través de varios experimentos con electromagnetismo y radiactividad, los físicos descubrieron que los \"átomos indivisibles\" eran de hecho un conglomerado de varias partículas subatómicas (principalmente, electrones, protones y neutrones), las que pueden existir separadas unas de otras. De hecho, en ciertos entornos extremos, como las estrellas de neutrones, la presión y la temperatura extremas impiden que los átomos puedan existir en absoluto."
-                    ],
-                    "subtemas":[]
+                    ]
                 },
                 {
                     "titulo":"Mezclas",
@@ -43,7 +41,7 @@
                     ],
                     "subtemas":[
                         {
-                            "titulo":"Mezclas Homogéneas:",
+                            "titulo":"Homogéneas:",
                             "img":{
                                 "height":350,
                                 "width":400,
@@ -54,7 +52,7 @@
                             ]
                         },
                         {
-                            "titulo":"Mezclas Heterogéneas:",
+                            "titulo":"Heterogéneas:",
                             "img":{
                                 "height":350,
                                 "width":400,

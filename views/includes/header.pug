@@ -36,12 +36,15 @@ header
                 ul
                     - let link = "/parcial"
                     li.nav-link: a(href="/") Inicio
-                    li.nav-link 
-                        a(href=link + "1") Primer Parcial
-                            i.fas.fa-caret-down
-                    li.nav-link 
-                        a(href=link + "2") Segundo Parcial
-                            i.fas.fa-caret-down
+                    for parcial, n in temario 
+                        - let url = link + `${n+1}`
+                        li.nav-link 
+                            a(href=url)=parcial.title
+                                i.fas.fa-caret-down
+                            ul.nav-dropdown
+                                for tema in parcial.temas
+                                    li.drop-link
+                                        a.drop-link(class=tema href=`#${tema}`)= tema
                     li.nav-link: a(href="/Tabla") Tabla Periodica
         .mode
             button.mode-button 

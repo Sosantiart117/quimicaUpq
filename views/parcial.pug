@@ -1,11 +1,10 @@
 doctype html
 //- Mixins
 mixin tema(info, n)
-    -let subs = info.subtemas
-    .contenedor(class=`tema-${n}`)
+    -let subs = info.subtemas;
+    .contenedor(class=`tema-${n}` id= n === 2 ? info.titulo.split(" ").join("-") : null)
         if info.titulo != undefined
             !=`<h${n}>${info.titulo}</h${n}>`
-        //-.contenedor-flex
         div(class= subs ? "contenedor-flex-column": "contenedor-flex")
             if info.cuerpo != undefined
                 .cuerpo-tema
@@ -28,6 +27,6 @@ html
     include includes/head
     body
         include includes/header.pug
-        main.temario
+        main
             for tema in parcial.temas
                 +tema(tema, 2)
