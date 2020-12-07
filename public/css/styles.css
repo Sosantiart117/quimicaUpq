@@ -19,8 +19,6 @@
     --primarySoft: #e9e9e92a;
     --contrastSoft: #3d6682;
 }
-
-
 html {
     box-sizing: border-box;
 }
@@ -29,7 +27,6 @@ body{
     height: 100%;
     font-family: 'Karla', sans-serif;
     color: var(--main);
-    transition: color 1000ms ease-in-out, background 500ms ease-in-out;
 }
 /*scrollbar*/
 body::-webkit-scrollbar{
@@ -46,6 +43,7 @@ body::-webkit-scrollbar-thumb{
 *, html, body{
     margin: 0; 
     padding: 0;
+    transition: color 1000ms ease-in-out, background 500ms ease-in-out;
 }
 *, *::after, *::before {
     box-sizing: inherit;
@@ -307,10 +305,25 @@ main{
 
 /*----------------------- footer --------------------------*/
 footer{
-    position: relative;
     z-index: 10;
+    background: var(--contrast);
+    color: var(--primary);
 }
-
+.foot {
+    padding: 2vh;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: var(--contrast);
+    color: var(--primary);
+}
+.foot > a {
+    color: var(--primary)
+}
+.foot > a:hover {
+    color: var(--accent)
+}
 
 /*----------------------- Index ---------------------------*/
 /*slider*/
