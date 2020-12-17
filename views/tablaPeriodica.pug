@@ -1,0 +1,13 @@
+include ./includes/table.pug
+doctype html
+include ./includes/head.pug
+body
+    table
+        for element, contador in tabla
+            if element.category.split(" ")[0] == "alkali" || element.number == 1
+                tr(class=contador)
+                +tableElement(element)
+            else 
+                +tableElement(element)
+            
+        
