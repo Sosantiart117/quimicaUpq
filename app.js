@@ -35,33 +35,33 @@ options.temario = temario;
 app.get("/", (req, res) => {
     options.title = "Pagina Principal"
     res.render("index",options);
-    fs.writeFile("public/html/index.html", 
-        pug.renderFile("views/index.pug", options), (err) => {
-            if (err) {
-                console.error(err);
-            }
-        })
+    //fs.writeFile("public/html/index.html", 
+        //pug.renderFile("views/index.pug", options), (err) => {
+            //if (err) {
+                //console.error(err);
+            //}
+        //})
 }).get('/tabla', (req, res) => {
     options.title = "Tabla Periodica";
     options.tabla = tabla.elements;
     res.render("tabla", options);
-    fs.writeFile("public/html/tabla.html", 
-        pug.renderFile("views/tabla.pug", options), (err) => {
-            if (err) { 
-                console.error(err);
-            }
-        })
+    //fs.writeFile("public/html/tabla.html", 
+        //pug.renderFile("views/tabla.pug", options), (err) => {
+            //if (err) { 
+                //console.error(err);
+            //}
+        //})
 }).get("/parcial:parcial", (req, res) => {
     equipo.show = true;
     options.parcial = info.parciales[req.params.parcial - 1];
     options.title = options.parcial.title;
     res.render("parcial", options);
-    fs.writeFile(`public/html/parcial${req.params.parcial}.html`, 
-        pug.renderFile("views/parcial.pug", options), (err) => {
-            if (err) { 
-                console.error(err);
-            }
-        })
+    //fs.writeFile(`public/html/parcial${req.params.parcial}.html`, 
+        //pug.renderFile("views/parcial.pug", options), (err) => {
+            //if (err) { 
+                //console.error(err);
+            //}
+        //})
 })
 
 // Listen on port ...
